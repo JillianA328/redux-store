@@ -1,19 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloProvider } from '@apollo/react-hooks';
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Nav from "./components/Nav";
-import Success from "./pages/Success";
-import { Provider } from 'react-redux';
-import OrderHistory from "./pages/OrderHistory";
-import store from './utils/store';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 
+import { setContext } from '@apollo/client/link/context';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
+import NoMatch from './pages/NoMatch';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Nav from './components/Nav';
+//import { StoreProvider } from './utils/GlobalState';
+import OrderHistory from './pages/OrderHistory';
+import Success from './pages/Success';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 
 const httpLink = createHttpLink({
