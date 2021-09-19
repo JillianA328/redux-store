@@ -1,13 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setConext } from '@apollo/client/link/conetext';
+import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -18,6 +13,7 @@ import Success from "./pages/Success";
 import { Provider } from 'react-redux';
 import OrderHistory from "./pages/OrderHistory";
 import store from './utils/store';
+
 
 
 const httpLink = createHttpLink({
